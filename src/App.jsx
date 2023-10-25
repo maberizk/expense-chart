@@ -2,8 +2,6 @@ import "./style.css";
 import data from "../data.json";
 
 function App() {
-  // console.log({ data });
-
   return (
     <>
       <div className="app">
@@ -22,34 +20,15 @@ function App() {
             <h2 className="spendingTitle">Spending - Last 7 days</h2>
           </div>
           <div className="graph">
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>mon</p>
-            </div>
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>tues</p>
-            </div>
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>wed</p>
-            </div>
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>thu</p>
-            </div>
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>fri</p>
-            </div>
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>sat</p>
-            </div>
-            <div className="dayBar">
-              <div className="bar"></div>
-              <p>sun</p>
-            </div>
+            {data.map((item) => (
+              <div className="dayBar" key={item.day}>
+                <div
+                  className="bar"
+                  style={{ height: `${item.amount * 2.5}px ` }}
+                ></div>
+                <p>{item.day}</p>
+              </div>
+            ))}
           </div>
           <div className="line"></div>
           <div className="total">
