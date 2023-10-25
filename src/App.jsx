@@ -1,10 +1,69 @@
-import { useState } from "react";
+import "./style.css";
+import data from "../data.json";
 
 function App() {
+  // console.log({ data });
+
   return (
     <>
-      My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun
-      Total this month $478.33 +2.4% from last month
+      <div className="app">
+        <div className="balanceSection">
+          <div>
+            <p>My balance</p>
+            <h2 className="balance">$921.48</h2>
+          </div>
+          <div className="circles">
+            <div className="circle white"></div>
+            <div className="circle black"></div>
+          </div>
+        </div>
+        <div className="graphSection">
+          <div>
+            <h2 className="spendingTitle">Spending - Last 7 days</h2>
+          </div>
+          <div className="graph">
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>mon</p>
+            </div>
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>tues</p>
+            </div>
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>wed</p>
+            </div>
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>thu</p>
+            </div>
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>fri</p>
+            </div>
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>sat</p>
+            </div>
+            <div className="dayBar">
+              <div className="bar"></div>
+              <p>sun</p>
+            </div>
+          </div>
+          <div className="line"></div>
+          <div className="total">
+            <div>
+              <h4>Total this month</h4>
+              <h1>$478.33</h1>
+            </div>
+            <div className="lastMonth">
+              <p className="bold">+2.4%</p>
+              <p className="fromLM">from last month</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
