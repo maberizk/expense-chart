@@ -2,6 +2,10 @@ import "./style.css";
 import data from "../data.json";
 
 function App() {
+  const maxExpenseItem = data.reduce((max, item) =>
+    item.amount > max.amount ? item : max
+  );
+
   return (
     <>
       <div className="app">
@@ -21,7 +25,13 @@ function App() {
           </div>
           <div className="graph">
             {data.map((item) => (
-              <div className="dayBar" key={item.day}>
+              <div
+                className={`dayBar ${
+                  item === maxExpenseItem ? "maxExpense" : ""
+                }`}
+                key={item.day}
+              >
+                <div className="amount">${item.amount} </div>
                 <div
                   className="bar"
                   style={{ height: `${item.amount * 2.5}px ` }}
