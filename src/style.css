@@ -77,17 +77,19 @@ p {
 
 .bar {
   background-color: hsl(10, 79%, 65%);
-  width: 45px;
-  /* height: 50px; */
+  width: 100%;
   margin-left: 2%;
+  border-radius: 5px;
+  margin-bottom: 10%;
 }
 
 .graph {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: end;
   margin-bottom: 5%;
+  width: 100%;
 }
 
 .spendingTitle {
@@ -104,11 +106,6 @@ p {
 
 .dayBar > p {
   color: hsl(28, 10%, 53%);
-}
-
-.bar {
-  border-radius: 5px;
-  margin-bottom: 10%;
 }
 
 .line {
@@ -168,4 +165,28 @@ h1 {
 
 .dayBar:hover > .bar {
   opacity: 50%;
+}
+
+@media screen and (max-width: 375px) {
+  .app {
+    width: 90%;
+  }
+
+  .bar {
+    width: 90%;
+  }
+
+  .graph {
+    justify-content: space-between;
+  }
+
+  .amount {
+    font-size: 0.8rem;
+  }
+  h4 {
+    margin-bottom: 2%;
+  }
+  .fromLM {
+    margin-top: 2%;
+  }
 }
