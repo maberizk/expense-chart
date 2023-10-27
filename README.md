@@ -35,6 +35,7 @@ Desktop -  Active State
 Mobile
 <br>
 <img src="/src/images/mobile.png">
+<br>
 Mobile - Active State
 <br>
 <img src="/src/images/mobile_active.png">
