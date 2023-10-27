@@ -26,14 +26,17 @@ Your users should be able to:
 - See hover states for all interactive elements on the page
 - **Bonus**: See dynamically generated bars based on the data provided in the local JSON file
 
+<h3>Completed Project<h3>
 <p align="center">
 Desktop
 <img src="/src/images/desktop.png">
 Desktop -  Active State
 <img src="/src/images/desktop_active.png">
 Mobile
+<br>
 <img src="/src/images/mobile.png">
 Mobile - Active State
+<br>
 <img src="/src/images/mobile_active.png">
 
 </p>
